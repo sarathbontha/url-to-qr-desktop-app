@@ -1,103 +1,98 @@
-# Smart QR Code Generator
+# URL to QR Maker
 
-## Project Overview
+## About the Project
 
-Smart QR Code Generator is a Python desktop application that generates a QR code from a website URL entered by the user. The application provides a simple graphical user interface where users can enter a URL, generate a QR code, preview it, and save the generated QR code as a PNG image.
+URL to QR Maker is a simple desktop application developed using Python. The application converts a website address entered by the user into a QR code.
 
-The project demonstrates the use of Python GUI development, QR code generation, input validation, file handling, and error handling.
+The user can enter a valid URL, create the QR code, preview the result inside the application, and save the generated QR code as an image. The project provides a simple way to understand how QR code generation works in Python.
 
-## Features
+## Main Features
 
-* Simple graphical user interface
-* Accepts website URLs from the user
-* Validates the entered URL
-* Generates QR codes dynamically
-* Displays the generated QR code inside the application
-* Allows users to save the QR code as a PNG file
-* Automatically creates a unique filename using date and time
-* Clear option to reset the application
-* Displays error messages for invalid or empty URLs
-* Supports both HTTP and HTTPS URLs
+* Enter a website address
+* Check whether the entered URL is valid
+* Generate a QR code from the URL
+* Preview the QR code in the application
+* Save the generated QR code as a PNG image
+* Reset the application to create another QR code
+* Show messages when the input is empty or incorrect
 
-## Technologies Used
+## Technologies
+
+This project uses:
 
 * Python 3
-* Tkinter
-* qrcode
-* Pillow (PIL)
-* Visual Studio Code
-* Git
-* GitHub
+* Tkinter for the graphical user interface
+* qrcode for creating QR codes
+* Pillow for displaying and working with images
+* Visual Studio Code for development
+* GitHub for sharing the project
 
-## Project Structure
+## Project Files
 
-```text
-SmartQRGenerator/
-├── app.py
+```text id="h2sf95"
+url-to-qr-desktop-app/
+├── main.py
 ├── requirements.txt
 ├── README.md
-└── screenshots/
-    └── qr_generator_output.png
+└── output/
+    └── qr_output.png
 ```
 
-## Installation
+## Required Libraries
 
-Clone or download the project and open the project directory.
+The following libraries are included in `requirements.txt`:
 
-Install the required Python libraries:
-
-```bash
-python3 -m pip install -r requirements.txt
-```
-
-The `requirements.txt` file contains:
-
-```text
+```text id="urvwh3"
 qrcode[pil]
 Pillow
 ```
 
-## Running the Application
+Install them by running:
 
-Run the application using:
-
-```bash
-python3 app.py
+```bash id="aegdxq"
+python3 -m pip install -r requirements.txt
 ```
 
-The Smart QR Code Generator window will open.
+## Running the Program
 
-## How to Use
+Open the project folder in the terminal and run:
 
-1. Enter a valid website URL beginning with `http://` or `https://`.
-2. Click **Generate QR Code**.
-3. The generated QR code will appear in the application.
-4. Scan the QR code to verify that it opens the correct website.
-5. Click **Save QR Code** to save it as a PNG image.
-6. Click **Clear** to reset the application and generate another QR code.
-
-## Example
-
-Example URL:
-
-```text
-https://www.bioxsystems.com/
+```bash id="nlqycj"
+python3 main.py
 ```
 
-The application generates a QR code containing this URL. When the QR code is scanned, the user is directed to the corresponding website.
+The URL to QR Maker application window will open.
 
-## Input Validation
+## Using the Application
 
-The application checks whether the URL is empty or invalid before generating a QR code. A valid URL must use either the HTTP or HTTPS protocol and contain a website address.
+Enter a website address beginning with `http://` or `https://`.
 
-This validation helps prevent QR codes from being generated from incorrect input.
+For example:
 
-## Application Output
+```text id="w43wsl"
+https://www.python.org/
+```
 
-A screenshot of the working application is available in the `screenshots` directory.
+Click **Create QR** to generate the QR code.
+
+The generated QR code will be displayed inside the application. It can be scanned using a mobile phone to verify that it opens the correct website.
+
+The QR code can also be saved as a PNG image for later use.
+
+## Input Checking
+
+The application checks the information entered by the user before creating the QR code. If the URL field is empty or the website address is not valid, the program displays a message asking the user to correct the input.
+
+This prevents the application from creating a QR code from incorrect information.
+
+## Output
+
+After a valid URL is entered, the application creates and displays the QR code. A screenshot of the completed application is included with the assignment documentation.
+
+## Purpose
+
+The purpose of this project is to practice Python programming by developing a small working application. Through this project, I learned how to accept user input, validate a URL, generate QR codes, display images using Tkinter, and save generated images.
 
 ## Conclusion
 
-The Smart QR Code Generator demonstrates how Python can be used to build a practical desktop application. The project combines Tkinter for the graphical user interface, the qrcode library for QR code generation, and Pillow for image processing and preview functionality.
-
-The application provides an easy way to convert website URLs into machine-readable QR codes and save them for future use.
+The URL to QR Maker provides a simple method for converting website addresses into QR codes. The project demonstrates how Python libraries can be combined to create a useful desktop application with a graphical user interface.
